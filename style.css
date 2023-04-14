@@ -351,9 +351,11 @@ header .nav-bar ul li a:hover::after {
 }
 
 .product-sec .product-main .product {
-    height: 180px;
     position: relative;
     border: none;
+}
+.product-sec .product-main .product img{
+   aspect-ratio: 16 / 9;
 }
 
 .product-sec .product-main .product p {
