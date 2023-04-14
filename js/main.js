@@ -1,3 +1,4 @@
+// accordion *************************
 function accordion() {
     let x = document.getElementById("click");
     let y = document.getElementById("sec");
@@ -37,7 +38,7 @@ function accordion() {
     });
   }
   accordion3();
-// 
+// btn menue *****************************
   let click = document.getElementById('click-menu').onclick = function (){
      let mydiv = document.getElementById('bar');
      mydiv.classList.toggle('tarnslate');
@@ -46,4 +47,10 @@ function accordion() {
     let mydiv = document.getElementById('bar');
     mydiv.classList.toggle('tarnslate'); 
   } 
-// 
+// scroll to top *****************************
+const mybt = document.getElementById("scroll");
+window.addEventListener("scroll", () => {
+  mybt.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+  });
+});

@@ -57,6 +57,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s;
+    color: var(--Main-Medium);
+    cursor: pointer;
+}
+
+.icon-vector:hover{
+    background-color: var(--Main-Third);
+    color: var(--Main-White);
 }
 
 .fa-chevron-left,
@@ -265,6 +273,7 @@ header .logo-serach-user .shoping .btn:hover {
 
 header .logo-serach-user .shoping .link-icone {
     display: flex;
+    color: var(--color-text-text);
 }
 
 header .logo-serach-user .shoping .shop {
@@ -274,8 +283,8 @@ header .logo-serach-user .shoping .shop {
 header .logo-serach-user .shoping .shop::after {
     content: "16";
     position: absolute;
-    top: -14px;
-    left: 15%;
+    top: -15px;
+    left: 5px;
     height: 20px;
     width: 20px;
     border-radius: 100%;
@@ -288,8 +297,11 @@ header .logo-serach-user .shoping .shop::after {
 
 }
 
-header .logo-serach-user .shoping .link-icone svg {
+header .logo-serach-user .shoping .link-icone i {
     margin-right: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* start nav-bar */
@@ -353,6 +365,7 @@ header .nav-bar ul li a:hover::after {
 .product-sec .product-main .product {
     position: relative;
     border: none;
+    height: 180px;
 }
 .product-sec .product-main .product img{
    aspect-ratio: 16 / 9;
@@ -376,27 +389,33 @@ header .nav-bar ul li a:hover::after {
 .rectangle-sec .rectangle-main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 24px 24px;
+    gap: 30px 30px;
 }
 
 .rectangle-sec .rectangle-main .rectangle {
     position: relative;
-    padding: 25px 20px 40px;
     border-radius: 5px;
-    
+    padding: 0 20px;
 }
-.rectangle-sec .rectangle-main .green-shoes {
-    padding: 0;
-    max-height: 367px;
+
+.rectangle-sec .rectangle-main .rectangle .image {
+    height: 200px;
+    width: 200px;
+    margin: 20px auto 0;
 }
-.rectangle-sec .rectangle-main .rectangle .color {
+.rectangle-sec .rectangle-main .rectangle .content  {
+    position: relative;
+    top: -1.5rem;
+    margin-bottom: 1rem;
+ }
+.rectangle-sec .rectangle-main .rectangle .content .color {
     color: var(--color-text-text);
     font-weight: 500;
     margin-bottom: 5px;
     font-size: 12px;
 }
 
-.rectangle-sec .rectangle-main .rectangle p {
+.rectangle-sec .rectangle-main .rectangle .content p {
     color: var(--color-text-paragraph);
     font-size: 14px;
     font-weight: 400;
@@ -406,17 +425,16 @@ header .nav-bar ul li a:hover::after {
 .rectangle-sec .rectangle-main .rectangle .price {
     position: absolute;
     bottom: 7px;
-    left: 19px;
+    left: 20px;
     font-weight: 500;
     color: var(--color-text-text);
     line-height: 24px;
 }
-
-.rectangle-sec .rectangle-main .rectangle .image {
-    margin: auto;
-    height: 200px;
-    width: 200px;
+.rectangle-sec .rectangle-main .green-shoes {
+    padding: 0;
+    max-height: 338px;
 }
+
 
 .rectangle-sec .rectangle-main .vanna {
     background-color: #D3FBD9;
@@ -922,6 +940,11 @@ header .nav-bar ul li a:hover::after {
 
 .sec-footer .footer-inc .scroll-top {
     grid-column: 11 / 13;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sec-footer .footer-inc .scroll-top:hover{
+   color: var(--Main-Third);
 }
 
 .sec-footer .footer-inc .scroll-top span {

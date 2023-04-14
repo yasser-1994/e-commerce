@@ -115,10 +115,12 @@
         width: 300px;
         z-index: 2;
         overflow: hidden;
-        transform: translateX(-300px);
+        transform: translateX(-100%);
+        box-shadow: 1px 0px 6px #8080807d;
+     
     }
     header .nav-bar.tarnslate{
-        transform: translateX(0);
+        transform: translateX(0%); 
     }
     header .nav-bar .fa-xmark{
         display: block;
@@ -137,15 +139,15 @@
     }
     
     header .nav-bar ul li{
-       margin: 15px 0;
+       margin: 25px 0;
 
     }
     header .nav-bar ul li .active, header .nav-bar ul li .active::after {
-        width: 100%;
-        color: var(--Main-Third);
+        width: 0;
+       color: var(--color-text-text);
     }
     header .nav-bar ul li a:hover::after {
-        width: 100%;
+        width: 50%;
     }
         
 }
@@ -162,8 +164,8 @@
 
     header .nav-bar .fa-xmark{
       
-        top: 5rem;
-        right: 2rem;
+        top: 2rem;
+        right: 1rem;
        
     }
 
