@@ -143,11 +143,11 @@
     header .nav-bar ul {
         flex-direction: column;
         justify-content: center;
-
+        margin-top: 30px;
     }
 
     header .nav-bar ul li {
-        margin: 25px 0;
+        margin: 20px 0;
 
     }
 
@@ -187,7 +187,7 @@
     }
 
     header .nav-bar .fa-xmark {
-        top: 1rem;
+        top: 2rem;
         right: 1rem;
     }
 
