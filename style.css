@@ -257,8 +257,8 @@ header .logo-serach-user .shoping {
 }
 
 header .logo-serach-user .shoping .btn {
-    padding: 15px 25px;
-    border-radius: 50px;
+    padding: 10px 30px;
+    border-radius: 100px;
     border: none;
     background-color: var(--Main-Primary);
     color: white;
