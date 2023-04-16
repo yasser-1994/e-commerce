@@ -657,7 +657,7 @@ header .nav-bar ul li a:hover::after {
 .sellers-sec .sellers-main {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    gap: 20px;
+    gap: 10px;
     overflow-x: hidden;
 }
 
