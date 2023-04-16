@@ -38,8 +38,8 @@ ul {
 
 body {
     background-color: var(--Base-Soft-Background);
-    height: 2000px;
 }
+
 
 .icon-slider {
     display: none;
@@ -231,7 +231,6 @@ header .container-btn-menu-tablet .container-search-tablet-screen form button[ty
     border: none;
     background: none;
 }
-
 header .logo-serach-user .container-search .categories,
 header .container-btn-menu-tablet .container-search-tablet-screen .categories {
     padding: 5px 0;
@@ -306,6 +305,10 @@ header .logo-serach-user .shoping .link-icone i {
 
 /* start nav-bar */
 header .nav-bar i{
+    display: none;
+    visibility: hidden;
+}
+header .nav-bar .categories{
     display: none;
     visibility: hidden;
 }
@@ -888,7 +891,7 @@ header .nav-bar ul li a:hover::after {
     grid-area: 1 / 1 / 1 / 3;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .sec-footer .footer-main .column-1 p {
@@ -996,6 +999,7 @@ header .nav-bar ul li a:hover::after {
 .sec-footer-small-mobile .dropdown ul li {
     border-bottom: 1px solid var(--Base-Border);
     padding: 20px;
+    font-size: 13px;
 }
 .sec-footer-small-mobile .social {
     display: flex;

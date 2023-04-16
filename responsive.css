@@ -100,7 +100,7 @@
         justify-content: center;
         cursor: pointer;
     }
-    
+
     header .logo-serach-user .container-search {
         display: none;
         visibility: hidden;
@@ -110,19 +110,27 @@
         position: fixed;
         height: 100vh;
         background: #ffffff;
-        left: 0;
+        left: -300px;
         top: 0;
         width: 300px;
         z-index: 2;
         overflow: hidden;
-        transform: translateX(-100%);
         box-shadow: 1px 0px 6px #8080807d;
-     
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
     }
-    header .nav-bar.tarnslate{
-        transform: translateX(0%); 
+
+    header .nav-bar.tarnslate {
+        left: 0;
+        opacity: 1;
     }
-    header .nav-bar .fa-xmark{
+
+    header .nav-bar .fa-xmark {
         display: block;
         visibility: visible;
         position: absolute;
@@ -131,25 +139,28 @@
         cursor: pointer;
         color: var(--Main-Medium);
     }
+
     header .nav-bar ul {
         flex-direction: column;
-        height: 100%;
         justify-content: center;
 
     }
-    
-    header .nav-bar ul li{
-       margin: 25px 0;
+
+    header .nav-bar ul li {
+        margin: 25px 0;
 
     }
-    header .nav-bar ul li .active, header .nav-bar ul li .active::after {
+
+    header .nav-bar ul li .active,
+    header .nav-bar ul li .active::after {
         width: 0;
-       color: var(--color-text-text);
+        color: var(--color-text-text);
     }
+
     header .nav-bar ul li a:hover::after {
         width: 50%;
     }
-        
+
 }
 
 /* mobile screen */
@@ -162,11 +173,22 @@
         grid-column: 10 / 13;
     }
 
-    header .nav-bar .fa-xmark{
-      
-        top: 2rem;
+    header .nav-bar .categories {
+        display: block;
+        visibility: visible;
+        padding: 5px 0;
+        background-color: var(--Base-Gray-Background);
+        border-radius: 20px;
+        color: var(--color-text-text);
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    header .nav-bar .fa-xmark {
+        top: 1rem;
         right: 1rem;
-       
     }
 
     header .logo-serach-user .shoping .btn,
@@ -322,7 +344,7 @@
         min-width: 80px;
         margin: 28px 0;
     }
- 
+
     .sec-advertisements .advertisements-main .box p {
         font-size: 14px;
     }
