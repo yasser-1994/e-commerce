@@ -6,6 +6,8 @@
 }
 html {
     scroll-behavior: smooth;
+    font-size: 14px;
+    font-weight: 400;
 }
 a {
     text-decoration: none;
@@ -141,26 +143,27 @@ header .logo-serach-user {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     justify-items: stretch;
-    margin-bottom: 26px;
+    margin-bottom: 31px;
+    gap: 24px 24px;
 }
 header .logo-serach-user .logo {
     grid-column: 1 / 3;
 }
 /* */
 header .logo-serach-user .container-search, header .container-btn-menu-tablet .container-search-tablet-screen {
-    grid-column: 3 / 9;
+    grid-column: 3 / 10;
     display: flex;
     align-items: center;
     border-radius: 50px;
-    padding: 8px 5px 8px 10px;
     background-color: var(--Main-White);
-    margin: 0 10px;
+    height: 48px;
+    padding: 0 15px;
 }
 header .logo-serach-user .container-search form, header .container-btn-menu-tablet .container-search-tablet-screen form {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 80%;
 }
 header .logo-serach-user .container-search form button .fa-magnifying-glass, header .container-btn-menu-tablet .container-search-tablet-screen form button .fa-magnifying-glass {
     color: var(--Main-Medium);
@@ -181,7 +184,6 @@ header .logo-serach-user .container-search form button[type=submit], header .con
     justify-content: center;
     padding: 10px;
     border-radius: 100px;
-    width: 10%;
     border: none;
     background: none;
 }
@@ -190,7 +192,10 @@ header .logo-serach-user .container-search .categories, header .container-btn-me
     background-color: var(--Base-Gray-Background);
     border-radius: 20px;
     color: var(--color-text-text);
-    width: 30%;
+    width: 154px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -204,16 +209,17 @@ header .logo-serach-user .shoping {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    grid-column: 9 / 13;
+    grid-column: 10 / 13;
 }
 header .logo-serach-user .shoping .btn {
-    padding: 10px 30px;
+    padding: 16px 30px;
     border-radius: 100px;
     border: none;
     background-color: var(--Main-Primary);
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 12px;
 }
 header .logo-serach-user .shoping .btn:hover {
     background-color: var(--Main-Third);
@@ -221,7 +227,9 @@ header .logo-serach-user .shoping .btn:hover {
 header .logo-serach-user .shoping .link-icone {
     display: flex;
     color: var(--color-text-text);
+    align-items: center;
 }
+
 header .logo-serach-user .shoping .shop {
     position: relative;
 }
@@ -240,12 +248,7 @@ header .logo-serach-user .shoping .shop::after {
     color: var(--Main-White);
     font-size: 12px;
 }
-header .logo-serach-user .shoping .link-icone i {
-    margin-right: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 /* start nav-bar */
 header .nav-bar i{
     display: none;

@@ -131,7 +131,7 @@
         width: 100%;
    }
     header .logo-serach-user .shoping {
-        grid-column: 11 / 13;
+        grid-column: 9 / 13;
    }
     header .nav-bar .categories {
         display: block;
