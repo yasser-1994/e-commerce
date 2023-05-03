@@ -446,7 +446,7 @@ header .nav-bar ul li a:hover::after {
 .rectangle-sec .rectangle-main .rectangle .content p {
     color: var(--color-text-paragraph);
     line-height: 24px;
-    margin: 33px 0;
+    margin: 25px 0;
 }
 
 .rectangle-sec .rectangle-main .rectangle .price {
@@ -460,7 +460,7 @@ header .nav-bar ul li a:hover::after {
 
 .rectangle-sec .rectangle-main .green-shoes {
     padding: 0;
-    max-height: 418px;
+    max-height: 394px;
 }
 
 .rectangle-sec .rectangle-main .vanna {
@@ -979,15 +979,18 @@ header .nav-bar ul li a:hover::after {
     width: 100%;
     padding: 15px 20px;
     border-radius: 50px;
-    border: 1px solid var(--Base-Border);
+    background-color: var(--Base-Background);
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
     color: var(--color-text-text);
-    font-weight: 500;
+   
 }
-
+.sec-footer-small-mobile .dropdown .btn-dropdown span{
+    font-weight: 500;
+  
+}
 .sec-footer-small-mobile .dropdown .btn-dropdown.change-color {
     background-color: var(--Main-Primary);
     color: white;
@@ -1007,7 +1010,8 @@ header .nav-bar ul li a:hover::after {
 .sec-footer-small-mobile .dropdown ul li {
     border-bottom: 1px solid var(--Base-Border);
     padding: 20px;
-    font-size: 0.813rem;
+    font-weight: 400;
+    color: var(--color-text-text);
 }
 
 .sec-footer-small-mobile .social {
