@@ -280,6 +280,7 @@ header .logo-serach-user .shoping .link-icone {
     align-items: center;
     border: none;
     background: none;
+    cursor: pointer;
 }
 
 header .logo-serach-user .shoping .shop {
