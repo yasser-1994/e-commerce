@@ -1,943 +1,1295 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>E-commerce</title>
-  <link rel="stylesheet" href="style.css" >
-  <link rel="stylesheet" href="responsive.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"/>
-</head>
-
-<body>
-  <!-- start-header=============================== -->
-  <header>
-    <div class="container">
-      <nav class="logo-serach-user">
-        <div class="logo">
-          <svg width="133" height="15" viewBox="0 0 133 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M3.18 2.29999V5.79999H7.88001V8.01999H3.18V11.72H8.48001V14H0.380005V0.019989H8.48001V2.29999H3.18Z"
-              fill="#EB6D20" />
-            <path d="M19.5445 5.67999V8.03999H11.0645V5.67999H19.5445Z" fill="#EB6D20" />
-            <path
-              d="M21.9647 8.45999C21.9647 7.31332 22.198 6.31332 22.6647 5.45999C23.1314 4.59332 23.778 3.92666 24.6047 3.45999C25.4314 2.97999 26.378 2.73999 27.4447 2.73999C28.818 2.73999 29.9514 3.08666 30.8447 3.77999C31.7514 4.45999 32.358 5.41999 32.6647 6.65999H29.6447C29.4847 6.17999 29.2114 5.80666 28.8247 5.53999C28.4514 5.25999 27.9847 5.11999 27.4247 5.11999C26.6247 5.11999 25.9914 5.41332 25.5247 5.99999C25.058 6.57332 24.8247 7.39332 24.8247 8.45999C24.8247 9.51332 25.058 10.3333 25.5247 10.92C25.9914 11.4933 26.6247 11.78 27.4247 11.78C28.558 11.78 29.298 11.2733 29.6447 10.26H32.6647C32.358 11.46 31.7514 12.4133 30.8447 13.12C29.938 13.8267 28.8047 14.18 27.4447 14.18C26.378 14.18 25.4314 13.9467 24.6047 13.48C23.778 13 23.1314 12.3333 22.6647 11.48C22.198 10.6133 21.9647 9.60666 21.9647 8.45999Z"
-              fill="#EB6D20" />
-            <path
-              d="M39.6359 14.18C38.5693 14.18 37.6093 13.9467 36.7559 13.48C35.9026 13 35.2293 12.3267 34.7359 11.46C34.2559 10.5933 34.0159 9.59332 34.0159 8.45999C34.0159 7.32666 34.2626 6.32666 34.7559 5.45999C35.2626 4.59332 35.9493 3.92666 36.8159 3.45999C37.6826 2.97999 38.6493 2.73999 39.7159 2.73999C40.7826 2.73999 41.7493 2.97999 42.6159 3.45999C43.4826 3.92666 44.1626 4.59332 44.6559 5.45999C45.1626 6.32666 45.4159 7.32666 45.4159 8.45999C45.4159 9.59332 45.1559 10.5933 44.6359 11.46C44.1293 12.3267 43.4359 13 42.5559 13.48C41.6893 13.9467 40.7159 14.18 39.6359 14.18ZM39.6359 11.74C40.1426 11.74 40.6159 11.62 41.0559 11.38C41.5093 11.1267 41.8693 10.7533 42.1359 10.26C42.4026 9.76666 42.5359 9.16666 42.5359 8.45999C42.5359 7.40666 42.2559 6.59999 41.6959 6.03999C41.1493 5.46666 40.4759 5.17999 39.6759 5.17999C38.8759 5.17999 38.2026 5.46666 37.6559 6.03999C37.1226 6.59999 36.8559 7.40666 36.8559 8.45999C36.8559 9.51332 37.1159 10.3267 37.6359 10.9C38.1693 11.46 38.8359 11.74 39.6359 11.74Z"
-              fill="#EB6D20" />
-            <path
-              d="M61.2299 2.75999C62.5899 2.75999 63.6832 3.17999 64.5098 4.01999C65.3498 4.84666 65.7699 6.00666 65.7699 7.49999V14H62.9698V7.87999C62.9698 7.01332 62.7498 6.35332 62.3098 5.89999C61.8699 5.43332 61.2699 5.19999 60.5098 5.19999C59.7499 5.19999 59.1432 5.43332 58.6898 5.89999C58.2498 6.35332 58.0299 7.01332 58.0299 7.87999V14H55.2299V7.87999C55.2299 7.01332 55.0098 6.35332 54.5698 5.89999C54.1298 5.43332 53.5298 5.19999 52.7698 5.19999C51.9965 5.19999 51.3832 5.43332 50.9298 5.89999C50.4898 6.35332 50.2698 7.01332 50.2698 7.87999V14H47.4698V2.91999H50.2698V4.25999C50.6298 3.79332 51.0898 3.42666 51.6498 3.15999C52.2232 2.89332 52.8498 2.75999 53.5299 2.75999C54.3965 2.75999 55.1698 2.94666 55.8498 3.31999C56.5299 3.67999 57.0565 4.19999 57.4298 4.87999C57.7898 4.23999 58.3098 3.72666 58.9898 3.33999C59.6832 2.95332 60.4299 2.75999 61.2299 2.75999Z"
-              fill="#EB6D20" />
-            <path
-              d="M82.1869 2.75999C83.5469 2.75999 84.6402 3.17999 85.4669 4.01999C86.3069 4.84666 86.7269 6.00666 86.7269 7.49999V14H83.9269V7.87999C83.9269 7.01332 83.7069 6.35332 83.2669 5.89999C82.8269 5.43332 82.2269 5.19999 81.4669 5.19999C80.7069 5.19999 80.1002 5.43332 79.6469 5.89999C79.2069 6.35332 78.9869 7.01332 78.9869 7.87999V14H76.1869V7.87999C76.1869 7.01332 75.9669 6.35332 75.5269 5.89999C75.0869 5.43332 74.4869 5.19999 73.7269 5.19999C72.9536 5.19999 72.3402 5.43332 71.8869 5.89999C71.4469 6.35332 71.2269 7.01332 71.2269 7.87999V14H68.4269V2.91999H71.2269V4.25999C71.5869 3.79332 72.0469 3.42666 72.6069 3.15999C73.1802 2.89332 73.8069 2.75999 74.4869 2.75999C75.3535 2.75999 76.1269 2.94666 76.8069 3.31999C77.4869 3.67999 78.0135 4.19999 78.3869 4.87999C78.7469 4.23999 79.2669 3.72666 79.9469 3.33999C80.6402 2.95332 81.3869 2.75999 82.1869 2.75999Z"
-              fill="#EB6D20" />
-            <path
-              d="M99.6839 8.21999C99.6839 8.61999 99.6572 8.97999 99.6039 9.29999H91.5039C91.5706 10.1 91.8506 10.7267 92.3439 11.18C92.8372 11.6333 93.4439 11.86 94.1639 11.86C95.2039 11.86 95.9439 11.4133 96.3839 10.52H99.4039C99.0839 11.5867 98.4706 12.4667 97.5639 13.16C96.6572 13.84 95.5439 14.18 94.2239 14.18C93.1572 14.18 92.1972 13.9467 91.3439 13.48C90.5039 13 89.8439 12.3267 89.3639 11.46C88.8972 10.5933 88.6639 9.59332 88.6639 8.45999C88.6639 7.31332 88.8972 6.30666 89.3639 5.43999C89.8306 4.57332 90.4839 3.90666 91.3239 3.43999C92.1639 2.97332 93.1306 2.73999 94.2239 2.73999C95.2773 2.73999 96.2172 2.96666 97.0439 3.41999C97.8839 3.87332 98.5306 4.51999 98.9839 5.35999C99.4506 6.18666 99.6839 7.13999 99.6839 8.21999ZM96.7839 7.41999C96.7706 6.69999 96.5106 6.12666 96.0039 5.69999C95.4972 5.25999 94.8772 5.03999 94.1439 5.03999C93.4506 5.03999 92.8639 5.25332 92.3839 5.67999C91.9172 6.09332 91.6306 6.67332 91.5239 7.41999H96.7839Z"
-              fill="#EB6D20" />
-            <path
-              d="M104.528 4.63999C104.888 4.05332 105.354 3.59332 105.928 3.25999C106.514 2.92666 107.181 2.75999 107.928 2.75999V5.69999H107.188C106.308 5.69999 105.641 5.90666 105.188 6.31999C104.748 6.73332 104.528 7.45332 104.528 8.47999V14H101.728V2.91999H104.528V4.63999Z"
-              fill="#EB6D20" />
-            <path
-              d="M109.094 8.45999C109.094 7.31332 109.327 6.31332 109.794 5.45999C110.26 4.59332 110.907 3.92666 111.734 3.45999C112.56 2.97999 113.507 2.73999 114.574 2.73999C115.947 2.73999 117.08 3.08666 117.974 3.77999C118.88 4.45999 119.487 5.41999 119.794 6.65999H116.774C116.614 6.17999 116.34 5.80666 115.954 5.53999C115.58 5.25999 115.114 5.11999 114.554 5.11999C113.754 5.11999 113.12 5.41332 112.654 5.99999C112.187 6.57332 111.954 7.39332 111.954 8.45999C111.954 9.51332 112.187 10.3333 112.654 10.92C113.12 11.4933 113.754 11.78 114.554 11.78C115.687 11.78 116.427 11.2733 116.774 10.26H119.794C119.487 11.46 118.88 12.4133 117.974 13.12C117.067 13.8267 115.934 14.18 114.574 14.18C113.507 14.18 112.56 13.9467 111.734 13.48C110.907 13 110.26 12.3333 109.794 11.48C109.327 10.6133 109.094 9.60666 109.094 8.45999Z"
-              fill="#EB6D20" />
-            <path
-              d="M132.145 8.21999C132.145 8.61999 132.118 8.97999 132.065 9.29999H123.965C124.032 10.1 124.312 10.7267 124.805 11.18C125.298 11.6333 125.905 11.86 126.625 11.86C127.665 11.86 128.405 11.4133 128.845 10.52H131.865C131.545 11.5867 130.932 12.4667 130.025 13.16C129.118 13.84 128.005 14.18 126.685 14.18C125.618 14.18 124.658 13.9467 123.805 13.48C122.965 13 122.305 12.3267 121.825 11.46C121.358 10.5933 121.125 9.59332 121.125 8.45999C121.125 7.31332 121.358 6.30666 121.825 5.43999C122.292 4.57332 122.945 3.90666 123.785 3.43999C124.625 2.97332 125.592 2.73999 126.685 2.73999C127.738 2.73999 128.678 2.96666 129.505 3.41999C130.345 3.87332 130.992 4.51999 131.445 5.35999C131.912 6.18666 132.145 7.13999 132.145 8.21999ZM129.245 7.41999C129.232 6.69999 128.972 6.12666 128.465 5.69999C127.958 5.25999 127.338 5.03999 126.605 5.03999C125.912 5.03999 125.325 5.25332 124.845 5.67999C124.378 6.09332 124.092 6.67332 123.985 7.41999H129.245Z"
-              fill="#EB6D20" />
-          </svg>
-        </div>
-        <div class="container-search">
-          <div class="categories">
-            <span>All Categories</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 6L8.70711 9.29289C8.31658 9.68342 7.68342 9.68342 7.29289 9.29289L4 6" stroke="#5F5F5F"
-                stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <form>
-            <input type="text" placeholder="Search anything" name="search2"/>
-            <button id="al" type="submit" aria-label="ya">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="11" cy="11" r="6" fill="#FFF9F3" stroke="#5F5F5F" stroke-width="2" />
-                <path d="M20 20L17 17" stroke="#5F5F5F" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </button>
-          </form>
-        </div>
-        <div class="shoping">
-          <button type="button" class="btn">Help</button>
-          <button type="button" class="link-icone account" data-aria="Account">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M19.7274 20.4471C19.2716 19.1713 18.2672 18.0439 16.8701 17.2399C15.4729 16.4358 13.7611 16 12 16C10.2389 16 8.52706 16.4358 7.12991 17.2399C5.73276 18.0439 4.72839 19.1713 4.27259 20.4471"
-                stroke="#5F5F5F" stroke-width="2" stroke-linecap="round" />
-              <circle cx="12" cy="8" r="4" stroke="#5F5F5F" stroke-width="2" stroke-linecap="round" />
-            </svg>
-            <span>Account</span>
-          </button>
-          <button type="button" class="link-icone shop" data-aria="Shoping">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12L8 8C8 5.79086 9.79086 4 12 4V4C14.2091 4 16 5.79086 16 8L16 12" stroke="#5F5F5F"
-                stroke-width="2" stroke-linecap="round" />
-              <path
-                d="M3.69435 12.6678C3.83942 10.9269 3.91196 10.0565 4.48605 9.52824C5.06013 9 5.9336 9 7.68053 9H16.3195C18.0664 9 18.9399 9 19.514 9.52824C20.088 10.0565 20.1606 10.9269 20.3057 12.6678L20.8195 18.8339C20.904 19.8474 20.9462 20.3542 20.6491 20.6771C20.352 21 19.8435 21 18.8264 21H5.1736C4.15655 21 3.64802 21 3.35092 20.6771C3.05382 20.3542 3.09605 19.8474 3.18051 18.8339L3.69435 12.6678Z"
-                stroke="#5F5F5F" stroke-width="2" />
-            </svg>
-             <span>Shoping</span>
-            <span class="step">16</span>
-          </button>
-        </div>
-      </nav>
-      <!-- tablet screen block -->
-      <div class="container-btn-menu-tablet">
-        <div id="click-menu" class="btn-menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 7H19" stroke="#5F5F5F" stroke-width="2" stroke-linecap="round" />
-            <path d="M5 12H15" stroke="#5F5F5F" stroke-width="2" stroke-linecap="round" />
-            <path d="M5 17H11" stroke="#5F5F5F" stroke-width="2" stroke-linecap="round" />
-          </svg>
-        </div>
-        <div class="container-search-tablet-screen">
-          <div class="categories">
-            All Categories
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 6L8.70711 9.29289C8.31658 9.68342 7.68342 9.68342 7.29289 9.29289L4 6" stroke="#5F5F5F"
-                stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <form>
-            <input type="text" placeholder="Search anything" name="search2"/>
-            <button id="all" type="submit" aria-label="y">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="11" cy="11" r="6" fill="#FFF9F3" stroke="#5F5F5F" stroke-width="2" />
-                <path d="M20 20L17 17" stroke="#5F5F5F" stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-      <!-- tablet screen block -->
-      <nav id="bar" class="nav-bar">
-        <i id="close" class="fa-solid fa-xmark fa-xl"></i>
-        <div class="categories">
-          <span>All Categories</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 6L8.70711 9.29289C8.31658 9.68342 7.68342 9.68342 7.29289 9.29289L4 6" stroke="#5F5F5F"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-        <ul>
-          <li>
-            <a class="active" href="#">Jewelry & Accessories</a>
-          </li>
-          <li>
-            <a href="#">Clothing & Shoes</a>
-          </li>
-          <li>
-            <a href="#">Home & Living</a>
-          </li>
-          <li>
-            <a href="#">Wedding & Party</a>
-          </li>
-          <li>
-            <a href="#">Toys & Entertainment</a>
-          </li>
-          <li>
-            <a href="#">Art & Collectibles</a>
-          </li>
-          <li>
-            <a href="#">Craft Supplies & Tools</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- end-header====================== -->
-
-  <main>
-    <!-- start-section-product============== -->
-    <div class="product-sec">
-      <div class="background"></div>
+  <body>
+    <!-- start-header=============================== -->
+    <header>
       <div class="container">
-        <div class="product-main">
-          <div class="product shoes">
-            <img class="img-max" src="images/shoes.png" alt="Shoes" loading="lazy"/>
-            <p>Clothing & Shoes</p>
-          </div>
-          <div class="product livng">
-            <img class="img-max" src="images/living.png" alt="Living" loading="lazy"/>
-            <p>Home & Living</p>
-          </div>
-          <div class="product art">
-            <img class="img-max" src="images/art.png" alt="Art" loading="lazy"/>
-            <p>Art & Collectibles</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end-section-product============== -->
-    <!-- start-sectipn-rectangle============= -->
-    <div class="rectangle-sec">
-      <div class="container">
-        <div class="rectangle-main">
-          <div class="rectangle vanna">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/vanna.png" alt="vanna" loading="lazy"/>
-            </div>
-            <div class="content">
-              <p class="color">colors</p>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <p>Vonna Neva Walnut Sandalye Chair</p>
-            </div>
-            <p class="price">195,13 $</p>
-          </div>
-          <div class="rectangle wood">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/wood.png" alt="wood" loading="lazy"/>
-            </div>
-            <div class="content">
-              <p class="color">colors</p>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <p>Wood lamp, Floor Lamp, Lambader, Decorative</p>
-            </div>
-            <p class="price">458,43 $</p>
-          </div>
-          <div class="rectangle seatsafa">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/seat-safa.png" alt="seat" loading="lazy"/>
-            </div>
-            <div class="content">
-              <p class="color">colors</p>
-              <span></span>
-              <span></span>
-              <span></span>
-              <p>
-                NOCKEBY 3-Seat Sofa Cover Slipcover Hand Made With Multiple
-              </p>
-            </div>
-            <p class="price">789,67 $</p>
-          </div>
-          <div class="rectangle lace">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/lace.png" alt="lace" loading="lazy"/>
-            </div>
-            <div class="content">
-              <p class="color">colors</p>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <p>
-                Lace Punch Needle Pillow Covers with invisible zipper, 16*16
-                inches
-              </p>
-            </div>
-            <p class="price">43,23 $</p>
-          </div>
-        </div>
-      </div>
-      <div class="icon-slider">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <!-- end-sectipn-rectangle============= -->
-    <!-- start-sectipn-community============= -->
-    <div class="community-sec">
-      <div class="container">
-        <div class="community-main">
-          <div class="community doing">
-            <div class="content">
-              <p class="heading">
-                A community <br/>
-                doing good
-              </p>
-              <p>
-                Commerce is a global online <br/>
-                marketplace, where people.
-              </p>
-            </div>
-            <img src="images/community.png" alt="community" loading="lazy"/>
-          </div>
-          <div class="community support">
-            <div class="content">
-              <p class="heading">
-                Support independent <br/>
-                creators
-              </p>
-              <p>
-                Just millions of people selling <br/>
-                the things they love.
-              </p>
-            </div>
-            <img src="images/support.png" alt="support" loading="lazy"/>
-          </div>
-          <div class="community mind">
-            <div class="content">
-              <p class="heading">
-                Peace <br/>
-                of mind
-              </p>
-              <p>
-                Privacy is the highest priority <br/>
-                of our dedicated team.
-              </p>
-            </div>
-            <img src="images/mind.png" alt="mind" loading="lazy"/>
-          </div>
-        </div>
-      </div>
-      <div class="icon-slider">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <!-- end-sectipn-community============= -->
-    <!-- start-sec-heading================= -->
-    <div class="container">
-      <section class="sec-heading">
-        <h1>Find things you'll love. Support independent sellers.</h1>
-        <span>Only on polka.</span>
-      </section>
-    </div>
-    <!-- end-sec-heading================= -->
-    <!-- start-section-sellers============= -->
-    <div class="sellers-sec">
-      <i class="fa-solid fa-chevron-left"></i>
-      <i class="fa-solid fa-chevron-right"></i>
-      <div class="container">
-        <div class="sellers-main">
-          <div class="sellers Craft-Kits">
-            <img src="images/craft.png" alt="craft" loading="lazy"/>
-            <p>Craft Kits</p>
-          </div>
-          <div class="sellers Throw-Pillows">
-            <img src="images/throw.png" alt="throw" loading="lazy"/>
-            <p>Throw Pillows</p>
-          </div>
-          <div class="sellers Natural-Glass">
-            <img src="images/natural.png" alt="natural" loading="lazy"/>
-            <p>Natural Glass</p>
-          </div>
-          <div class="sellers Self-care">
-            <img src="images/selfcare.png" alt="selfcare" loading="lazy"/>
-            <p>Self care</p>
-          </div>
-          <div class="sellers Gift-Ideas">
-            <img src="images/giftideas.png" alt="giftideas" loading="lazy"/>
-            <p>Gift Ideas</p>
-          </div>
-          <div class="sellers Wall-Decor">
-            <img src="images/wall-decor.png" alt="wall" loading="lazy"/>
-            <p>Wall Decor</p>
-          </div>
-          <div class="sellers Wedding">
-            <img src="images/wedding.png" alt="wedding" loading="lazy"/>
-            <p>Wedding</p>
-          </div>
-          <div class="sellers Life-Style">
-            <img src="images/life-style.png" alt="lifestyle" loading="lazy"/>
-            <p>Life Style</p>
-          </div>
-        </div>
-      </div>
-      <div class="icon-slider">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <!-- end-section-sellers============= -->
-    <!-- start-sec-heading================= -->
-    <div class="container">
-      <section class="sec-heading-2">
-        <h2>Discover unique hand-picked items.</h2>
-        <div class="view">
-          <a href="#">View all</a>
-          <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.33331 1L11.3333 5M11.3333 5L7.33331 9M11.3333 5H1.33331" stroke="#EB8426"
-              stroke-linecap="round" />
-          </svg>
-        </div>
-      </section>
-    </div>
-    <!-- end-sec-heading================= -->
-    <!-- start-sec-item-shop============== -->
-    <div class="sec-item-shop">
-      <i class="fa-solid fa-chevron-left"></i>
-      <i class="fa-solid fa-chevron-right"></i>
-      <div class="container">
-        <div class="item-shop-main">
-          <div class="item-shop Leather-Bag-1">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img src="images/bag-1.png" alt="bag-1" loading="lazy"/>
-            </div>
-            <p>Distressed Tote Leather Bag Leather Bag</p>
-            <span>216,27 $</span>
-          </div>
-          <div class="item-shop Womens-Cognac">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/women.png" alt="women" loading="lazy"/>
-            </div>
-            <p>Womens Cognac Leather Elastic Straps</p>
-            <span>195,13 $</span>
-          </div>
-          <div class="item-shop Leather-Bag-2">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/blue-bag.png" alt="bluebag" loading="lazy"/>
-            </div>
-            <p>Distressed Tote Leather Bag Leather Bag</p>
-            <span>910,76 $</span>
-          </div>
-          <div class="item-shop Canvas-Shoes">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/canvas-shoes.png" alt="canvas" loading="lazy"/>
-            </div>
-            <p>High Top Canvas Shoes</p>
-            <span>341,02 $</span>
-          </div>
-          <div class="item-shop Wedding-Ring">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/ring.png" alt="ring" loading="lazy"/>
-            </div>
-            <p>Rose Gold Moissanite Vintage Wedding Ring Set</p>
-            <span>3.344,13 $</span>
-          </div>
-          <div class="item-shop Gold-Plated">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/gold.png" alt="gold" loading="lazy"/>
-            </div>
-            <p>Blue Topaz Bangle 24K Gold Plated Handmade</p>
-            <span>789,09 $</span>
-          </div>
-        </div>
-      </div>
-      <div class="icon-slider">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-
-    <!-- end-sec-item-shop============== -->
-    <!-- start-advertisements-sec========= -->
-    <div class="sec-advertisements">
-      <div class="container">
-        <div class="advertisements-main">
-          <div class="box">
-            <div class="content">
-              <p>Modern</p>
-              <p>Farmhouse</p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="content">
-              <p>Eclectic</p>
-              <p>Decor</p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="content">
-              <p>Polka Boho</p>
-              <p>Decor</p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="content">
-              <p>Minimalist</p>
-              <p>Style</p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="content">
-              <p>Anniversary</p>
-              <p>Gift</p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="content">
-              <p>Wedding</p>
-              <p>Gifts</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end-advertisements-sec========= -->
-    <!-- start-sectipn-rectangle============= -->
-    <div class="rectangle-sec">
-      <div class="container">
-        <div class="rectangle-main">
-          <!--  -->
-          <div class="rectangle green-shoes">
-            <img class="img-max" src="images/unsplash_M7cQqGjBNm8.jpg" alt="unsplash" loading="lazy"/>
-          </div>
-          <!--  -->
-          <div class="rectangle rovina">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/rovina.png" alt="rovina" loading="lazy"/>
-            </div>
-            <div class="content">
-              <p class="color">colors</p>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <p>Rovena Riva Series 6 Pcs. Wide Seating Claret Red Chair</p>
-            </div>
-            <p class="price">195,13 $</p>
-          </div>
-          <div class="rectangle iphone">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/iphone.png" alt="iphone" loading="lazy"/>
-            </div>
-            <div class="content">
-              <p class="color">colors</p>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <p>Iphone 12 128 GB (Red) Apple</p>
-            </div>
-            <p class="price">458,43 $</p>
-          </div>
-          <div class="rectangle rovina-2">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/rovina-2.png" alt="rovina-2" loading="lazy"/>
-            </div>
-            <div class="content">
-              <p class="color">colors</p>
-              <span></span>
-              <span></span>
-              <span></span>
-              <p>Rovena Riva Series 6 Pcs. Wide Seating Claret Red Chair</p>
-            </div>
-            <p class="price">789,67 $</p>
-          </div>
-        </div>
-      </div>
-      <div class="icon-slider">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <!-- end-sectipn-rectangle============= -->
-    <!-- start-sec-item-shop============== -->
-    <div class="sec-item-shop">
-      <div class="container">
-        <div class="item-shop-main">
-          <div class="item-shop Leather-Bag-1">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img src="images/bag-1.png" alt="bag-1" loading="lazy"/>
-            </div>
-            <p>Distressed Tote Leather Bag Leather Bag</p>
-            <span>216,27 $</span>
-          </div>
-          <div class="item-shop Womens-Cognac">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/women.png" alt="women" loading="lazy"/>
-            </div>
-            <p>Womens Cognac Leather Elastic Straps</p>
-            <span>195,13 $</span>
-          </div>
-          <div class="item-shop Leather-Bag-2">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/blue-bag.png" alt="bluebag" loading="lazy"/>
-            </div>
-            <p>Distressed Tote Leather Bag Leather Bag</p>
-            <span>910,76 $</span>
-          </div>
-          <div class="item-shop Canvas-Shoes">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/canvas-shoes.png" alt="canvas" loading="lazy"/>
-            </div>
-            <p>High Top Canvas Shoes</p>
-            <span>341,02 $</span>
-          </div>
-          <div class="item-shop Wedding-Ring">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/ring.png" alt="ring" loading="lazy"/>
-            </div>
-            <p>Rose Gold Moissanite Vintage Wedding Ring Set</p>
-            <span>3.344,13 $</span>
-          </div>
-          <div class="item-shop Gold-Plated">
-            <button type="button" class="icon-vector">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="image">
-              <img class="img-max" src="images/gold.png" alt="gold" loading="lazy"/>
-            </div>
-            <p>Blue Topaz Bangle 24K Gold Plated Handmade</p>
-            <span>789,09 $</span>
-          </div>
-        </div>
-      </div>
-      <div class="icon-slider">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <!-- end-sec-item-shop============== -->
-    <!-- start-emial-sec===================== -->
-    <div class="sec-email">
-      <div class="container">
-        <div class="email-main">
-          <div class="content">
-            <p class="heading">Yes!</p>
-            <p class="para">
-              Send me exclusive offers, unique gift ideas, and personalized
-              tips for shopping and selling on Commerce.
-            </p>
-          </div>
-          <div class="form">
-            <form>
-              <input type="email" name="email" placeholder="Drop your Email"/>
-              <button class="btn" type="submit">
-                Subscribe
-                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.33331 1L11.3333 5M11.3333 5L7.33331 9M11.3333 5H1.33331" stroke="white"
-                    stroke-linecap="round" />
-                </svg>
-              </button>
-            </form>
-            <form>
-              <button class="btn-small-mobile" type="submit">
-                Subscribe
-                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.33331 1L11.3333 5M11.3333 5L7.33331 9M11.3333 5H1.33331" stroke="white"
-                    stroke-linecap="round" />
-                </svg>
-              </button>
-            </form>
-
-            <a href="#">First order only. You’re ready?</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end-emial-sec===================== -->
-    <!-- start-sec-electricity============= -->
-    <div class="electricity-sec">
-      <div class="container">
-        <div class="electricity-main">
-          <p>Commerce, is powered by 100% renewable electricity.</p>
-        </div>
-      </div>
-    </div>
-    <!-- start-sec-electricity============= -->
-  </main>
-  <footer>
-    <!-- start-sec-footer============= -->
-    <div class="sec-footer">
-      <div class="container">
-        <div class="footer-main">
-          <!-- column-1 -->
-          <div class="column column-1">
-            <svg width="133" height="15" viewBox="0 0 133 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <nav class="logo-serach-user">
+          <div class="logo">
+            <svg
+              width="133"
+              height="15"
+              viewBox="0 0 133 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path
                 d="M3.18 2.29999V5.79999H7.88001V8.01999H3.18V11.72H8.48001V14H0.380005V0.019989H8.48001V2.29999H3.18Z"
-                fill="#EB6D20" />
-              <path d="M19.5445 5.67999V8.03999H11.0645V5.67999H19.5445Z" fill="#EB6D20" />
+                fill="#EB6D20"
+              />
+              <path
+                d="M19.5445 5.67999V8.03999H11.0645V5.67999H19.5445Z"
+                fill="#EB6D20"
+              />
               <path
                 d="M21.9647 8.45999C21.9647 7.31332 22.198 6.31332 22.6647 5.45999C23.1314 4.59332 23.778 3.92666 24.6047 3.45999C25.4314 2.97999 26.378 2.73999 27.4447 2.73999C28.818 2.73999 29.9514 3.08666 30.8447 3.77999C31.7514 4.45999 32.358 5.41999 32.6647 6.65999H29.6447C29.4847 6.17999 29.2114 5.80666 28.8247 5.53999C28.4514 5.25999 27.9847 5.11999 27.4247 5.11999C26.6247 5.11999 25.9914 5.41332 25.5247 5.99999C25.058 6.57332 24.8247 7.39332 24.8247 8.45999C24.8247 9.51332 25.058 10.3333 25.5247 10.92C25.9914 11.4933 26.6247 11.78 27.4247 11.78C28.558 11.78 29.298 11.2733 29.6447 10.26H32.6647C32.358 11.46 31.7514 12.4133 30.8447 13.12C29.938 13.8267 28.8047 14.18 27.4447 14.18C26.378 14.18 25.4314 13.9467 24.6047 13.48C23.778 13 23.1314 12.3333 22.6647 11.48C22.198 10.6133 21.9647 9.60666 21.9647 8.45999Z"
-                fill="#EB6D20" />
+                fill="#EB6D20"
+              />
               <path
                 d="M39.6359 14.18C38.5693 14.18 37.6093 13.9467 36.7559 13.48C35.9026 13 35.2293 12.3267 34.7359 11.46C34.2559 10.5933 34.0159 9.59332 34.0159 8.45999C34.0159 7.32666 34.2626 6.32666 34.7559 5.45999C35.2626 4.59332 35.9493 3.92666 36.8159 3.45999C37.6826 2.97999 38.6493 2.73999 39.7159 2.73999C40.7826 2.73999 41.7493 2.97999 42.6159 3.45999C43.4826 3.92666 44.1626 4.59332 44.6559 5.45999C45.1626 6.32666 45.4159 7.32666 45.4159 8.45999C45.4159 9.59332 45.1559 10.5933 44.6359 11.46C44.1293 12.3267 43.4359 13 42.5559 13.48C41.6893 13.9467 40.7159 14.18 39.6359 14.18ZM39.6359 11.74C40.1426 11.74 40.6159 11.62 41.0559 11.38C41.5093 11.1267 41.8693 10.7533 42.1359 10.26C42.4026 9.76666 42.5359 9.16666 42.5359 8.45999C42.5359 7.40666 42.2559 6.59999 41.6959 6.03999C41.1493 5.46666 40.4759 5.17999 39.6759 5.17999C38.8759 5.17999 38.2026 5.46666 37.6559 6.03999C37.1226 6.59999 36.8559 7.40666 36.8559 8.45999C36.8559 9.51332 37.1159 10.3267 37.6359 10.9C38.1693 11.46 38.8359 11.74 39.6359 11.74Z"
-                fill="#EB6D20" />
+                fill="#EB6D20"
+              />
               <path
                 d="M61.2299 2.75999C62.5899 2.75999 63.6832 3.17999 64.5098 4.01999C65.3498 4.84666 65.7699 6.00666 65.7699 7.49999V14H62.9698V7.87999C62.9698 7.01332 62.7498 6.35332 62.3098 5.89999C61.8699 5.43332 61.2699 5.19999 60.5098 5.19999C59.7499 5.19999 59.1432 5.43332 58.6898 5.89999C58.2498 6.35332 58.0299 7.01332 58.0299 7.87999V14H55.2299V7.87999C55.2299 7.01332 55.0098 6.35332 54.5698 5.89999C54.1298 5.43332 53.5298 5.19999 52.7698 5.19999C51.9965 5.19999 51.3832 5.43332 50.9298 5.89999C50.4898 6.35332 50.2698 7.01332 50.2698 7.87999V14H47.4698V2.91999H50.2698V4.25999C50.6298 3.79332 51.0898 3.42666 51.6498 3.15999C52.2232 2.89332 52.8498 2.75999 53.5299 2.75999C54.3965 2.75999 55.1698 2.94666 55.8498 3.31999C56.5299 3.67999 57.0565 4.19999 57.4298 4.87999C57.7898 4.23999 58.3098 3.72666 58.9898 3.33999C59.6832 2.95332 60.4299 2.75999 61.2299 2.75999Z"
-                fill="#EB6D20" />
+                fill="#EB6D20"
+              />
               <path
                 d="M82.1869 2.75999C83.5469 2.75999 84.6402 3.17999 85.4669 4.01999C86.3069 4.84666 86.7269 6.00666 86.7269 7.49999V14H83.9269V7.87999C83.9269 7.01332 83.7069 6.35332 83.2669 5.89999C82.8269 5.43332 82.2269 5.19999 81.4669 5.19999C80.7069 5.19999 80.1002 5.43332 79.6469 5.89999C79.2069 6.35332 78.9869 7.01332 78.9869 7.87999V14H76.1869V7.87999C76.1869 7.01332 75.9669 6.35332 75.5269 5.89999C75.0869 5.43332 74.4869 5.19999 73.7269 5.19999C72.9536 5.19999 72.3402 5.43332 71.8869 5.89999C71.4469 6.35332 71.2269 7.01332 71.2269 7.87999V14H68.4269V2.91999H71.2269V4.25999C71.5869 3.79332 72.0469 3.42666 72.6069 3.15999C73.1802 2.89332 73.8069 2.75999 74.4869 2.75999C75.3535 2.75999 76.1269 2.94666 76.8069 3.31999C77.4869 3.67999 78.0135 4.19999 78.3869 4.87999C78.7469 4.23999 79.2669 3.72666 79.9469 3.33999C80.6402 2.95332 81.3869 2.75999 82.1869 2.75999Z"
-                fill="#EB6D20" />
+                fill="#EB6D20"
+              />
               <path
                 d="M99.6839 8.21999C99.6839 8.61999 99.6572 8.97999 99.6039 9.29999H91.5039C91.5706 10.1 91.8506 10.7267 92.3439 11.18C92.8372 11.6333 93.4439 11.86 94.1639 11.86C95.2039 11.86 95.9439 11.4133 96.3839 10.52H99.4039C99.0839 11.5867 98.4706 12.4667 97.5639 13.16C96.6572 13.84 95.5439 14.18 94.2239 14.18C93.1572 14.18 92.1972 13.9467 91.3439 13.48C90.5039 13 89.8439 12.3267 89.3639 11.46C88.8972 10.5933 88.6639 9.59332 88.6639 8.45999C88.6639 7.31332 88.8972 6.30666 89.3639 5.43999C89.8306 4.57332 90.4839 3.90666 91.3239 3.43999C92.1639 2.97332 93.1306 2.73999 94.2239 2.73999C95.2773 2.73999 96.2172 2.96666 97.0439 3.41999C97.8839 3.87332 98.5306 4.51999 98.9839 5.35999C99.4506 6.18666 99.6839 7.13999 99.6839 8.21999ZM96.7839 7.41999C96.7706 6.69999 96.5106 6.12666 96.0039 5.69999C95.4972 5.25999 94.8772 5.03999 94.1439 5.03999C93.4506 5.03999 92.8639 5.25332 92.3839 5.67999C91.9172 6.09332 91.6306 6.67332 91.5239 7.41999H96.7839Z"
-                fill="#EB6D20" />
+                fill="#EB6D20"
+              />
               <path
                 d="M104.528 4.63999C104.888 4.05332 105.354 3.59332 105.928 3.25999C106.514 2.92666 107.181 2.75999 107.928 2.75999V5.69999H107.188C106.308 5.69999 105.641 5.90666 105.188 6.31999C104.748 6.73332 104.528 7.45332 104.528 8.47999V14H101.728V2.91999H104.528V4.63999Z"
-                fill="#EB6D20" />
+                fill="#EB6D20"
+              />
               <path
                 d="M109.094 8.45999C109.094 7.31332 109.327 6.31332 109.794 5.45999C110.26 4.59332 110.907 3.92666 111.734 3.45999C112.56 2.97999 113.507 2.73999 114.574 2.73999C115.947 2.73999 117.08 3.08666 117.974 3.77999C118.88 4.45999 119.487 5.41999 119.794 6.65999H116.774C116.614 6.17999 116.34 5.80666 115.954 5.53999C115.58 5.25999 115.114 5.11999 114.554 5.11999C113.754 5.11999 113.12 5.41332 112.654 5.99999C112.187 6.57332 111.954 7.39332 111.954 8.45999C111.954 9.51332 112.187 10.3333 112.654 10.92C113.12 11.4933 113.754 11.78 114.554 11.78C115.687 11.78 116.427 11.2733 116.774 10.26H119.794C119.487 11.46 118.88 12.4133 117.974 13.12C117.067 13.8267 115.934 14.18 114.574 14.18C113.507 14.18 112.56 13.9467 111.734 13.48C110.907 13 110.26 12.3333 109.794 11.48C109.327 10.6133 109.094 9.60666 109.094 8.45999Z"
-                fill="#EB6D20" />
+                fill="#EB6D20"
+              />
               <path
                 d="M132.145 8.21999C132.145 8.61999 132.118 8.97999 132.065 9.29999H123.965C124.032 10.1 124.312 10.7267 124.805 11.18C125.298 11.6333 125.905 11.86 126.625 11.86C127.665 11.86 128.405 11.4133 128.845 10.52H131.865C131.545 11.5867 130.932 12.4667 130.025 13.16C129.118 13.84 128.005 14.18 126.685 14.18C125.618 14.18 124.658 13.9467 123.805 13.48C122.965 13 122.305 12.3267 121.825 11.46C121.358 10.5933 121.125 9.59332 121.125 8.45999C121.125 7.31332 121.358 6.30666 121.825 5.43999C122.292 4.57332 122.945 3.90666 123.785 3.43999C124.625 2.97332 125.592 2.73999 126.685 2.73999C127.738 2.73999 128.678 2.96666 129.505 3.41999C130.345 3.87332 130.992 4.51999 131.445 5.35999C131.912 6.18666 132.145 7.13999 132.145 8.21999ZM129.245 7.41999C129.232 6.69999 128.972 6.12666 128.465 5.69999C127.958 5.25999 127.338 5.03999 126.605 5.03999C125.912 5.03999 125.325 5.25332 124.845 5.67999C124.378 6.09332 124.092 6.67332 123.985 7.41999H129.245Z"
-                fill="#EB6D20" />
+                fill="#EB6D20"
+              />
             </svg>
-            <p>Cricklewood,London NW2 6qg, Uk</p>
+          </div>
+          <div class="container-search">
+            <div class="categories">
+              <span>All Categories</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 6L8.70711 9.29289C8.31658 9.68342 7.68342 9.68342 7.29289 9.29289L4 6"
+                  stroke="#5F5F5F"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <form>
+              <input type="text" placeholder="Search anything" name="search2" />
+              <button id="al" type="submit" aria-label="ya">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="11"
+                    cy="11"
+                    r="6"
+                    fill="#FFF9F3"
+                    stroke="#5F5F5F"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M20 20L17 17"
+                    stroke="#5F5F5F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="shoping">
+            <button type="button" class="btn">Help</button>
+            <button
+              type="button"
+              class="link-icone account"
+              data-aria="Account"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.7274 20.4471C19.2716 19.1713 18.2672 18.0439 16.8701 17.2399C15.4729 16.4358 13.7611 16 12 16C10.2389 16 8.52706 16.4358 7.12991 17.2399C5.73276 18.0439 4.72839 19.1713 4.27259 20.4471"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <circle
+                  cx="12"
+                  cy="8"
+                  r="4"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span>Account</span>
+            </button>
+            <button type="button" class="link-icone shop" data-aria="Shoping">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 12L8 8C8 5.79086 9.79086 4 12 4V4C14.2091 4 16 5.79086 16 8L16 12"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M3.69435 12.6678C3.83942 10.9269 3.91196 10.0565 4.48605 9.52824C5.06013 9 5.9336 9 7.68053 9H16.3195C18.0664 9 18.9399 9 19.514 9.52824C20.088 10.0565 20.1606 10.9269 20.3057 12.6678L20.8195 18.8339C20.904 19.8474 20.9462 20.3542 20.6491 20.6771C20.352 21 19.8435 21 18.8264 21H5.1736C4.15655 21 3.64802 21 3.35092 20.6771C3.05382 20.3542 3.09605 19.8474 3.18051 18.8339L3.69435 12.6678Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+              <span>Shoping</span>
+              <span class="step">16</span>
+            </button>
+          </div>
+        </nav>
+        <!-- tablet screen block -->
+        <div class="container-btn-menu-tablet">
+          <div id="click-menu" class="btn-menu">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 7H19"
+                stroke="#5F5F5F"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M5 12H15"
+                stroke="#5F5F5F"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M5 17H11"
+                stroke="#5F5F5F"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="container-search-tablet-screen">
+            <div class="categories">
+              All Categories
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 6L8.70711 9.29289C8.31658 9.68342 7.68342 9.68342 7.29289 9.29289L4 6"
+                  stroke="#5F5F5F"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <form>
+              <input type="text" placeholder="Search anything" name="search2" />
+              <button id="all" type="submit" aria-label="y">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="11"
+                    cy="11"
+                    r="6"
+                    fill="#FFF9F3"
+                    stroke="#5F5F5F"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M20 20L17 17"
+                    stroke="#5F5F5F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- tablet screen block -->
+        <nav id="bar" class="nav-bar">
+          <i id="close" class="fa-solid fa-xmark fa-xl"></i>
+          <div class="categories">
+            <span>All Categories</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 6L8.70711 9.29289C8.31658 9.68342 7.68342 9.68342 7.29289 9.29289L4 6"
+                stroke="#5F5F5F"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <ul>
+            <li>
+              <a class="active" href="#">Jewelry & Accessories</a>
+            </li>
+            <li>
+              <a href="#">Clothing & Shoes</a>
+            </li>
+            <li>
+              <a href="#">Home & Living</a>
+            </li>
+            <li>
+              <a href="#">Wedding & Party</a>
+            </li>
+            <li>
+              <a href="#">Toys & Entertainment</a>
+            </li>
+            <li>
+              <a href="#">Art & Collectibles</a>
+            </li>
+            <li>
+              <a href="#">Craft Supplies & Tools</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- end-header====================== -->
+
+    <main>
+      <!-- start-section-product============== -->
+      <div class="product-sec">
+        <div class="background"></div>
+        <div class="container">
+          <div class="product-main">
+            <div class="product shoes">
+              <img
+                class="img-max"
+                src="images/shoes.png"
+                alt="Shoes"
+                loading="lazy"
+              />
+              <p>Clothing & Shoes</p>
+            </div>
+            <div class="product livng">
+              <img
+                class="img-max"
+                src="images/living.png"
+                alt="Living"
+                loading="lazy"
+              />
+              <p>Home & Living</p>
+            </div>
+            <div class="product art">
+              <img
+                class="img-max"
+                src="images/art.png"
+                alt="Art"
+                loading="lazy"
+              />
+              <p>Art & Collectibles</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end-section-product============== -->
+      <!-- start-sectipn-rectangle============= -->
+      <div class="rectangle-sec">
+        <div class="container">
+          <div class="rectangle-main">
+            <div class="rectangle vanna">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/vanna.png"
+                  alt="vanna"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <p class="color">colors</p>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>Vonna Neva Walnut Sandalye Chair</p>
+              </div>
+              <p class="price">195,13 $</p>
+            </div>
+            <div class="rectangle wood">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/wood.png"
+                  alt="wood"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <p class="color">colors</p>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>Wood lamp, Floor Lamp, Lambader, Decorative</p>
+              </div>
+              <p class="price">458,43 $</p>
+            </div>
+            <div class="rectangle seatsafa">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/seat-safa.png"
+                  alt="seat"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <p class="color">colors</p>
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>
+                  NOCKEBY 3-Seat Sofa Cover Slipcover Hand Made With Multiple
+                </p>
+              </div>
+              <p class="price">789,67 $</p>
+            </div>
+            <div class="rectangle lace">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/lace.png"
+                  alt="lace"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <p class="color">colors</p>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>
+                  Lace Punch Needle Pillow Covers with invisible zipper, 16*16
+                  inches
+                </p>
+              </div>
+              <p class="price">43,23 $</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-slider">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- end-sectipn-rectangle============= -->
+      <!-- start-sectipn-community============= -->
+      <div class="community-sec">
+        <div class="container">
+          <div class="community-main">
+            <div class="community doing">
+              <div class="content">
+                <p class="heading">
+                  A community <br />
+                  doing good
+                </p>
+                <p>
+                  Commerce is a global online <br />
+                  marketplace, where people.
+                </p>
+              </div>
+              <img src="images/community.png" alt="community" loading="lazy" />
+            </div>
+            <div class="community support">
+              <div class="content">
+                <p class="heading">
+                  Support independent <br />
+                  creators
+                </p>
+                <p>
+                  Just millions of people selling <br />
+                  the things they love.
+                </p>
+              </div>
+              <img src="images/support.png" alt="support" loading="lazy" />
+            </div>
+            <div class="community mind">
+              <div class="content">
+                <p class="heading">
+                  Peace <br />
+                  of mind
+                </p>
+                <p>
+                  Privacy is the highest priority <br />
+                  of our dedicated team.
+                </p>
+              </div>
+              <img src="images/mind.png" alt="mind" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="icon-slider">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- end-sectipn-community============= -->
+      <!-- start-sec-heading================= -->
+      <div class="container">
+        <section class="sec-heading">
+          <h1>Find things you'll love. Support independent sellers.</h1>
+          <span>Only on polka.</span>
+        </section>
+      </div>
+      <!-- end-sec-heading================= -->
+      <!-- start-section-sellers============= -->
+      <div class="sellers-sec">
+        <i class="fa-solid fa-chevron-left"></i>
+        <i class="fa-solid fa-chevron-right"></i>
+        <div class="container">
+          <div class="sellers-main">
+            <div class="sellers Craft-Kits">
+              <img src="images/craft.png" alt="craft" loading="lazy" />
+              <p>Craft Kits</p>
+            </div>
+            <div class="sellers Throw-Pillows">
+              <img src="images/throw.png" alt="throw" loading="lazy" />
+              <p>Throw Pillows</p>
+            </div>
+            <div class="sellers Natural-Glass">
+              <img src="images/natural.png" alt="natural" loading="lazy" />
+              <p>Natural Glass</p>
+            </div>
+            <div class="sellers Self-care">
+              <img src="images/selfcare.png" alt="selfcare" loading="lazy" />
+              <p>Self care</p>
+            </div>
+            <div class="sellers Gift-Ideas">
+              <img src="images/giftideas.png" alt="giftideas" loading="lazy" />
+              <p>Gift Ideas</p>
+            </div>
+            <div class="sellers Wall-Decor">
+              <img src="images/wall-decor.png" alt="wall" loading="lazy" />
+              <p>Wall Decor</p>
+            </div>
+            <div class="sellers Wedding">
+              <img src="images/wedding.png" alt="wedding" loading="lazy" />
+              <p>Wedding</p>
+            </div>
+            <div class="sellers Life-Style">
+              <img src="images/life-style.png" alt="lifestyle" loading="lazy" />
+              <p>Life Style</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-slider">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- end-section-sellers============= -->
+      <!-- start-sec-heading================= -->
+      <div class="container">
+        <section class="sec-heading-2">
+          <h2>Discover unique hand-picked items.</h2>
+          <div class="view">
+            <a href="#">View all</a>
+            <svg
+              width="13"
+              height="10"
+              viewBox="0 0 13 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.33331 1L11.3333 5M11.3333 5L7.33331 9M11.3333 5H1.33331"
+                stroke="#EB8426"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </section>
+      </div>
+      <!-- end-sec-heading================= -->
+      <!-- start-sec-item-shop============== -->
+      <div class="sec-item-shop">
+        <i class="fa-solid fa-chevron-left"></i>
+        <i class="fa-solid fa-chevron-right"></i>
+        <div class="container">
+          <div class="item-shop-main">
+            <div class="item-shop Leather-Bag-1">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img src="images/bag-1.png" alt="bag-1" loading="lazy" />
+              </div>
+              <p>Distressed Tote Leather Bag Leather Bag</p>
+              <span>216,27 $</span>
+            </div>
+            <div class="item-shop Womens-Cognac">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/women.png"
+                  alt="women"
+                  loading="lazy"
+                />
+              </div>
+              <p>Womens Cognac Leather Elastic Straps</p>
+              <span>195,13 $</span>
+            </div>
+            <div class="item-shop Leather-Bag-2">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/blue-bag.png"
+                  alt="bluebag"
+                  loading="lazy"
+                />
+              </div>
+              <p>Distressed Tote Leather Bag Leather Bag</p>
+              <span>910,76 $</span>
+            </div>
+            <div class="item-shop Canvas-Shoes">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/canvas-shoes.png"
+                  alt="canvas"
+                  loading="lazy"
+                />
+              </div>
+              <p>High Top Canvas Shoes</p>
+              <span>341,02 $</span>
+            </div>
+            <div class="item-shop Wedding-Ring">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/ring.png"
+                  alt="ring"
+                  loading="lazy"
+                />
+              </div>
+              <p>Rose Gold Moissanite Vintage Wedding Ring Set</p>
+              <span>3.344,13 $</span>
+            </div>
+            <div class="item-shop Gold-Plated">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/gold.png"
+                  alt="gold"
+                  loading="lazy"
+                />
+              </div>
+              <p>Blue Topaz Bangle 24K Gold Plated Handmade</p>
+              <span>789,09 $</span>
+            </div>
+          </div>
+        </div>
+        <div class="icon-slider">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- end-sec-item-shop============== -->
+      <!-- start-advertisements-sec========= -->
+      <div class="sec-advertisements">
+        <div class="container">
+          <div class="advertisements-main">
+            <div class="box">
+              <div class="content">
+                <p>Modern</p>
+                <p>Farmhouse</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="content">
+                <p>Eclectic</p>
+                <p>Decor</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="content">
+                <p>Polka Boho</p>
+                <p>Decor</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="content">
+                <p>Minimalist</p>
+                <p>Style</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="content">
+                <p>Anniversary</p>
+                <p>Gift</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="content">
+                <p>Wedding</p>
+                <p>Gifts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end-advertisements-sec========= -->
+      <!-- start-sectipn-rectangle============= -->
+      <div class="rectangle-sec">
+        <div class="container">
+          <div class="rectangle-main">
+            <!--  -->
+            <div class="rectangle green-shoes">
+              <img
+                class="img-max"
+                src="images/unsplash_M7cQqGjBNm8.jpg"
+                alt="unsplash"
+                loading="lazy"
+              />
+            </div>
+            <!--  -->
+            <div class="rectangle rovina">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/rovina.png"
+                  alt="rovina"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <p class="color">colors</p>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>Rovena Riva Series 6 Pcs. Wide Seating Claret Red Chair</p>
+              </div>
+              <p class="price">195,13 $</p>
+            </div>
+            <div class="rectangle iphone">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/iphone.png"
+                  alt="iphone"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <p class="color">colors</p>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>Iphone 12 128 GB (Red) Apple</p>
+              </div>
+              <p class="price">458,43 $</p>
+            </div>
+            <div class="rectangle rovina-2">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/rovina-2.png"
+                  alt="rovina-2"
+                  loading="lazy"
+                />
+              </div>
+              <div class="content">
+                <p class="color">colors</p>
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>Rovena Riva Series 6 Pcs. Wide Seating Claret Red Chair</p>
+              </div>
+              <p class="price">789,67 $</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-slider">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- end-sectipn-rectangle============= -->
+      <!-- start-sec-item-shop============== -->
+      <div class="sec-item-shop">
+        <div class="container">
+          <div class="item-shop-main">
+            <div class="item-shop Leather-Bag-1">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img src="images/bag-1.png" alt="bag-1" loading="lazy" />
+              </div>
+              <p>Distressed Tote Leather Bag Leather Bag</p>
+              <span>216,27 $</span>
+            </div>
+            <div class="item-shop Womens-Cognac">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/women.png"
+                  alt="women"
+                  loading="lazy"
+                />
+              </div>
+              <p>Womens Cognac Leather Elastic Straps</p>
+              <span>195,13 $</span>
+            </div>
+            <div class="item-shop Leather-Bag-2">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/blue-bag.png"
+                  alt="bluebag"
+                  loading="lazy"
+                />
+              </div>
+              <p>Distressed Tote Leather Bag Leather Bag</p>
+              <span>910,76 $</span>
+            </div>
+            <div class="item-shop Canvas-Shoes">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/canvas-shoes.png"
+                  alt="canvas"
+                  loading="lazy"
+                />
+              </div>
+              <p>High Top Canvas Shoes</p>
+              <span>341,02 $</span>
+            </div>
+            <div class="item-shop Wedding-Ring">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/ring.png"
+                  alt="ring"
+                  loading="lazy"
+                />
+              </div>
+              <p>Rose Gold Moissanite Vintage Wedding Ring Set</p>
+              <span>3.344,13 $</span>
+            </div>
+            <div class="item-shop Gold-Plated">
+              <button type="button" class="icon-vector">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <div class="image">
+                <img
+                  class="img-max"
+                  src="images/gold.png"
+                  alt="gold"
+                  loading="lazy"
+                />
+              </div>
+              <p>Blue Topaz Bangle 24K Gold Plated Handmade</p>
+              <span>789,09 $</span>
+            </div>
+          </div>
+        </div>
+        <div class="icon-slider">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- end-sec-item-shop============== -->
+      <!-- start-emial-sec===================== -->
+      <div class="sec-email">
+        <div class="container">
+          <div class="email-main">
+            <div class="content">
+              <p class="heading">Yes!</p>
+              <p class="para">
+                Send me exclusive offers, unique gift ideas, and personalized
+                tips for shopping and selling on Commerce.
+              </p>
+            </div>
+            <div class="form">
+              <form>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Drop your Email"
+                />
+                <button class="btn" type="submit">
+                  Subscribe
+                  <svg
+                    width="13"
+                    height="10"
+                    viewBox="0 0 13 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.33331 1L11.3333 5M11.3333 5L7.33331 9M11.3333 5H1.33331"
+                      stroke="white"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </form>
+              <form>
+                <button class="btn-small-mobile" type="submit">
+                  Subscribe
+                  <svg
+                    width="13"
+                    height="10"
+                    viewBox="0 0 13 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.33331 1L11.3333 5M11.3333 5L7.33331 9M11.3333 5H1.33331"
+                      stroke="white"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </form>
+
+              <a href="#">First order only. You’re ready?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end-emial-sec===================== -->
+      <!-- start-sec-electricity============= -->
+      <div class="electricity-sec">
+        <div class="container">
+          <div class="electricity-main">
+            <p>Commerce, is powered by 100% renewable electricity.</p>
+          </div>
+        </div>
+      </div>
+      <!-- start-sec-electricity============= -->
+    </main>
+    <footer>
+      <!-- start-sec-footer============= -->
+      <div class="sec-footer">
+        <div class="container">
+          <div class="footer-main">
+            <!-- column-1 -->
+            <div class="column column-1">
+              <svg
+                width="133"
+                height="15"
+                viewBox="0 0 133 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.18 2.29999V5.79999H7.88001V8.01999H3.18V11.72H8.48001V14H0.380005V0.019989H8.48001V2.29999H3.18Z"
+                  fill="#EB6D20"
+                />
+                <path
+                  d="M19.5445 5.67999V8.03999H11.0645V5.67999H19.5445Z"
+                  fill="#EB6D20"
+                />
+                <path
+                  d="M21.9647 8.45999C21.9647 7.31332 22.198 6.31332 22.6647 5.45999C23.1314 4.59332 23.778 3.92666 24.6047 3.45999C25.4314 2.97999 26.378 2.73999 27.4447 2.73999C28.818 2.73999 29.9514 3.08666 30.8447 3.77999C31.7514 4.45999 32.358 5.41999 32.6647 6.65999H29.6447C29.4847 6.17999 29.2114 5.80666 28.8247 5.53999C28.4514 5.25999 27.9847 5.11999 27.4247 5.11999C26.6247 5.11999 25.9914 5.41332 25.5247 5.99999C25.058 6.57332 24.8247 7.39332 24.8247 8.45999C24.8247 9.51332 25.058 10.3333 25.5247 10.92C25.9914 11.4933 26.6247 11.78 27.4247 11.78C28.558 11.78 29.298 11.2733 29.6447 10.26H32.6647C32.358 11.46 31.7514 12.4133 30.8447 13.12C29.938 13.8267 28.8047 14.18 27.4447 14.18C26.378 14.18 25.4314 13.9467 24.6047 13.48C23.778 13 23.1314 12.3333 22.6647 11.48C22.198 10.6133 21.9647 9.60666 21.9647 8.45999Z"
+                  fill="#EB6D20"
+                />
+                <path
+                  d="M39.6359 14.18C38.5693 14.18 37.6093 13.9467 36.7559 13.48C35.9026 13 35.2293 12.3267 34.7359 11.46C34.2559 10.5933 34.0159 9.59332 34.0159 8.45999C34.0159 7.32666 34.2626 6.32666 34.7559 5.45999C35.2626 4.59332 35.9493 3.92666 36.8159 3.45999C37.6826 2.97999 38.6493 2.73999 39.7159 2.73999C40.7826 2.73999 41.7493 2.97999 42.6159 3.45999C43.4826 3.92666 44.1626 4.59332 44.6559 5.45999C45.1626 6.32666 45.4159 7.32666 45.4159 8.45999C45.4159 9.59332 45.1559 10.5933 44.6359 11.46C44.1293 12.3267 43.4359 13 42.5559 13.48C41.6893 13.9467 40.7159 14.18 39.6359 14.18ZM39.6359 11.74C40.1426 11.74 40.6159 11.62 41.0559 11.38C41.5093 11.1267 41.8693 10.7533 42.1359 10.26C42.4026 9.76666 42.5359 9.16666 42.5359 8.45999C42.5359 7.40666 42.2559 6.59999 41.6959 6.03999C41.1493 5.46666 40.4759 5.17999 39.6759 5.17999C38.8759 5.17999 38.2026 5.46666 37.6559 6.03999C37.1226 6.59999 36.8559 7.40666 36.8559 8.45999C36.8559 9.51332 37.1159 10.3267 37.6359 10.9C38.1693 11.46 38.8359 11.74 39.6359 11.74Z"
+                  fill="#EB6D20"
+                />
+                <path
+                  d="M61.2299 2.75999C62.5899 2.75999 63.6832 3.17999 64.5098 4.01999C65.3498 4.84666 65.7699 6.00666 65.7699 7.49999V14H62.9698V7.87999C62.9698 7.01332 62.7498 6.35332 62.3098 5.89999C61.8699 5.43332 61.2699 5.19999 60.5098 5.19999C59.7499 5.19999 59.1432 5.43332 58.6898 5.89999C58.2498 6.35332 58.0299 7.01332 58.0299 7.87999V14H55.2299V7.87999C55.2299 7.01332 55.0098 6.35332 54.5698 5.89999C54.1298 5.43332 53.5298 5.19999 52.7698 5.19999C51.9965 5.19999 51.3832 5.43332 50.9298 5.89999C50.4898 6.35332 50.2698 7.01332 50.2698 7.87999V14H47.4698V2.91999H50.2698V4.25999C50.6298 3.79332 51.0898 3.42666 51.6498 3.15999C52.2232 2.89332 52.8498 2.75999 53.5299 2.75999C54.3965 2.75999 55.1698 2.94666 55.8498 3.31999C56.5299 3.67999 57.0565 4.19999 57.4298 4.87999C57.7898 4.23999 58.3098 3.72666 58.9898 3.33999C59.6832 2.95332 60.4299 2.75999 61.2299 2.75999Z"
+                  fill="#EB6D20"
+                />
+                <path
+                  d="M82.1869 2.75999C83.5469 2.75999 84.6402 3.17999 85.4669 4.01999C86.3069 4.84666 86.7269 6.00666 86.7269 7.49999V14H83.9269V7.87999C83.9269 7.01332 83.7069 6.35332 83.2669 5.89999C82.8269 5.43332 82.2269 5.19999 81.4669 5.19999C80.7069 5.19999 80.1002 5.43332 79.6469 5.89999C79.2069 6.35332 78.9869 7.01332 78.9869 7.87999V14H76.1869V7.87999C76.1869 7.01332 75.9669 6.35332 75.5269 5.89999C75.0869 5.43332 74.4869 5.19999 73.7269 5.19999C72.9536 5.19999 72.3402 5.43332 71.8869 5.89999C71.4469 6.35332 71.2269 7.01332 71.2269 7.87999V14H68.4269V2.91999H71.2269V4.25999C71.5869 3.79332 72.0469 3.42666 72.6069 3.15999C73.1802 2.89332 73.8069 2.75999 74.4869 2.75999C75.3535 2.75999 76.1269 2.94666 76.8069 3.31999C77.4869 3.67999 78.0135 4.19999 78.3869 4.87999C78.7469 4.23999 79.2669 3.72666 79.9469 3.33999C80.6402 2.95332 81.3869 2.75999 82.1869 2.75999Z"
+                  fill="#EB6D20"
+                />
+                <path
+                  d="M99.6839 8.21999C99.6839 8.61999 99.6572 8.97999 99.6039 9.29999H91.5039C91.5706 10.1 91.8506 10.7267 92.3439 11.18C92.8372 11.6333 93.4439 11.86 94.1639 11.86C95.2039 11.86 95.9439 11.4133 96.3839 10.52H99.4039C99.0839 11.5867 98.4706 12.4667 97.5639 13.16C96.6572 13.84 95.5439 14.18 94.2239 14.18C93.1572 14.18 92.1972 13.9467 91.3439 13.48C90.5039 13 89.8439 12.3267 89.3639 11.46C88.8972 10.5933 88.6639 9.59332 88.6639 8.45999C88.6639 7.31332 88.8972 6.30666 89.3639 5.43999C89.8306 4.57332 90.4839 3.90666 91.3239 3.43999C92.1639 2.97332 93.1306 2.73999 94.2239 2.73999C95.2773 2.73999 96.2172 2.96666 97.0439 3.41999C97.8839 3.87332 98.5306 4.51999 98.9839 5.35999C99.4506 6.18666 99.6839 7.13999 99.6839 8.21999ZM96.7839 7.41999C96.7706 6.69999 96.5106 6.12666 96.0039 5.69999C95.4972 5.25999 94.8772 5.03999 94.1439 5.03999C93.4506 5.03999 92.8639 5.25332 92.3839 5.67999C91.9172 6.09332 91.6306 6.67332 91.5239 7.41999H96.7839Z"
+                  fill="#EB6D20"
+                />
+                <path
+                  d="M104.528 4.63999C104.888 4.05332 105.354 3.59332 105.928 3.25999C106.514 2.92666 107.181 2.75999 107.928 2.75999V5.69999H107.188C106.308 5.69999 105.641 5.90666 105.188 6.31999C104.748 6.73332 104.528 7.45332 104.528 8.47999V14H101.728V2.91999H104.528V4.63999Z"
+                  fill="#EB6D20"
+                />
+                <path
+                  d="M109.094 8.45999C109.094 7.31332 109.327 6.31332 109.794 5.45999C110.26 4.59332 110.907 3.92666 111.734 3.45999C112.56 2.97999 113.507 2.73999 114.574 2.73999C115.947 2.73999 117.08 3.08666 117.974 3.77999C118.88 4.45999 119.487 5.41999 119.794 6.65999H116.774C116.614 6.17999 116.34 5.80666 115.954 5.53999C115.58 5.25999 115.114 5.11999 114.554 5.11999C113.754 5.11999 113.12 5.41332 112.654 5.99999C112.187 6.57332 111.954 7.39332 111.954 8.45999C111.954 9.51332 112.187 10.3333 112.654 10.92C113.12 11.4933 113.754 11.78 114.554 11.78C115.687 11.78 116.427 11.2733 116.774 10.26H119.794C119.487 11.46 118.88 12.4133 117.974 13.12C117.067 13.8267 115.934 14.18 114.574 14.18C113.507 14.18 112.56 13.9467 111.734 13.48C110.907 13 110.26 12.3333 109.794 11.48C109.327 10.6133 109.094 9.60666 109.094 8.45999Z"
+                  fill="#EB6D20"
+                />
+                <path
+                  d="M132.145 8.21999C132.145 8.61999 132.118 8.97999 132.065 9.29999H123.965C124.032 10.1 124.312 10.7267 124.805 11.18C125.298 11.6333 125.905 11.86 126.625 11.86C127.665 11.86 128.405 11.4133 128.845 10.52H131.865C131.545 11.5867 130.932 12.4667 130.025 13.16C129.118 13.84 128.005 14.18 126.685 14.18C125.618 14.18 124.658 13.9467 123.805 13.48C122.965 13 122.305 12.3267 121.825 11.46C121.358 10.5933 121.125 9.59332 121.125 8.45999C121.125 7.31332 121.358 6.30666 121.825 5.43999C122.292 4.57332 122.945 3.90666 123.785 3.43999C124.625 2.97332 125.592 2.73999 126.685 2.73999C127.738 2.73999 128.678 2.96666 129.505 3.41999C130.345 3.87332 130.992 4.51999 131.445 5.35999C131.912 6.18666 132.145 7.13999 132.145 8.21999ZM129.245 7.41999C129.232 6.69999 128.972 6.12666 128.465 5.69999C127.958 5.25999 127.338 5.03999 126.605 5.03999C125.912 5.03999 125.325 5.25332 124.845 5.67999C124.378 6.09332 124.092 6.67332 123.985 7.41999H129.245Z"
+                  fill="#EB6D20"
+                />
+              </svg>
+              <p>Cricklewood,London NW2 6qg, Uk</p>
+              <div class="social">
+                <div class="facebook">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 8C16 3.6 12.4 0 8 0C3.6 0 0 3.6 0 8C0 12 2.9 15.3 6.7 15.9V10.3H4.7V8H6.7V6.2C6.7 4.2 7.9 3.1 9.7 3.1C10.6 3.1 11.5 3.3 11.5 3.3V5.3H10.5C9.5 5.3 9.2 5.9 9.2 6.5V8H11.4L11 10.3H9.1V16C13.1 15.4 16 12 16 8Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="twitter">
+                  <svg
+                    width="16"
+                    height="14"
+                    viewBox="0 0 16 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 2C15.4 2.3 14.8 2.4 14.1 2.5C14.8 2.1 15.3 1.5 15.5 0.7C14.9 1.1 14.2 1.3 13.4 1.5C12.8 0.9 11.9 0.5 11 0.5C8.9 0.5 7.3 2.5 7.8 4.5C5.1 4.4 2.7 3.1 1 1.1C0.1 2.6 0.6 4.5 2 5.5C1.5 5.5 1 5.3 0.5 5.1C0.5 6.6 1.6 8 3.1 8.4C2.6 8.5 2.1 8.6 1.6 8.5C2 9.8 3.2 10.8 4.7 10.8C3.5 11.7 1.7 12.2 0 12C1.5 12.9 3.2 13.5 5 13.5C11.1 13.5 14.5 8.4 14.3 3.7C15 3.3 15.6 2.7 16 2Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="linkin">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.60001 16H0.199997V5.3H3.60001V16ZM1.9 3.8C0.800002 3.8 0 3 0 1.9C0 0.8 0.900002 0 1.9 0C3 0 3.8 0.8 3.8 1.9C3.8 3 3 3.8 1.9 3.8ZM16 16H12.6V10.2C12.6 8.5 11.9 8 10.9 8C9.89999 8 8.89999 8.8 8.89999 10.3V16H5.5V5.3H8.7V6.8C9 6.1 10.2 5 11.9 5C13.8 5 15.8 6.1 15.8 9.4V16H16Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="dribble">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.4 16 16 12.416 16 8C16 3.584 12.4 0 8 0ZM13.28 3.68C14.24 4.848 14.8 6.32 14.832 7.936C14.608 7.888 12.352 7.44 10.08 7.712C10.032 7.6 9.984 7.472 9.936 7.36C9.792 7.024 9.648 6.688 9.488 6.368C11.984 5.36 13.136 3.872 13.28 3.68ZM8 1.184C9.728 1.184 11.328 1.84 12.528 2.896C12.4 3.072 11.376 4.448 8.944 5.36C7.824 3.296 6.576 1.616 6.4 1.36C6.912 1.248 7.44 1.184 8 1.184ZM5.088 1.824C5.264 2.064 6.48 3.76 7.616 5.776C4.416 6.624 1.6 6.608 1.296 6.608C1.76 4.48 3.184 2.72 5.088 1.824ZM1.168 8.016C1.168 7.952 1.168 7.872 1.168 7.808C1.456 7.824 4.784 7.856 8.192 6.832C8.384 7.216 8.576 7.6 8.752 8C8.672 8.032 8.576 8.048 8.48 8.08C4.96 9.216 3.088 12.32 2.928 12.576C1.824 11.36 1.168 9.76 1.168 8.016ZM8 14.832C6.416 14.832 4.96 14.288 3.808 13.392C3.936 13.136 5.312 10.464 9.168 9.12C9.184 9.104 9.2 9.104 9.216 9.104C10.176 11.6 10.576 13.68 10.672 14.288C9.856 14.64 8.944 14.832 8 14.832ZM11.808 13.664C11.744 13.248 11.376 11.248 10.48 8.8C12.624 8.464 14.496 9.024 14.736 9.088C14.432 10.992 13.344 12.64 11.808 13.664Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- column-2 -->
+            <div class="column column-2">
+              <p>Shop</p>
+              <ul>
+                <li>Gift cards</li>
+                <li>Site map</li>
+                <li>Polka blog</li>
+                <li>Login</li>
+                <li>Sign in</li>
+              </ul>
+            </div>
+            <!-- column-3 -->
+            <div class="column column-3">
+              <p>Sell</p>
+              <ul>
+                <li>Sell on Polka</li>
+                <li>Teams</li>
+                <li>Forums</li>
+                <li>Affiliates</li>
+              </ul>
+            </div>
+            <!-- column-4 -->
+            <div class="column column-4">
+              <p>About</p>
+              <ul>
+                <li>Polka, Inc.</li>
+                <li>Policies</li>
+                <li>Investors</li>
+                <li>Careers</li>
+                <li>Press</li>
+              </ul>
+            </div>
+            <!-- column-5 -->
+            <div class="column column-5">
+              <p>Help</p>
+              <ul>
+                <li>Help Center</li>
+                <li>Trust and safety</li>
+                <li>Privacy settings</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-inc">
+            <div class="inc">
+              <p>© 2022 Commerce, Inc.</p>
+            </div>
+            <div class="cookis">
+              <span>Privacy policy</span>
+              <span>Terms of use</span>
+              <span>Cookies</span>
+            </div>
+            <div id="scroll" class="scroll-top">
+              <span>Scroll to top</span>
+              <i class="fa-solid fa-arrow-up"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end-sec-footer============= -->
+      <!-- start-sec-footer-small-mobile====== -->
+      <div class="sec-footer-small-mobile">
+        <div class="container">
+          <div class="sec-footer-small-mobile-main">
+            <div class="dropdown">
+              <div id="click" class="btn-dropdown">
+                <span>Shop</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul id="sec">
+                <li>Gift cards</li>
+                <li>Site map</li>
+                <li>Polka blog</li>
+                <li>Login</li>
+                <li>Sign in</li>
+              </ul>
+            </div>
+            <!--  -->
+            <div class="dropdown">
+              <div id="click2" class="btn-dropdown">
+                <span>Sell</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul id="sec2">
+                <li>Sell on Polka</li>
+                <li>Teams</li>
+                <li>Forums</li>
+                <li>Affiliates</li>
+              </ul>
+            </div>
+            <!--  -->
+            <div class="dropdown">
+              <div id="click3" class="btn-dropdown">
+                <span>About</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul id="sec3">
+                <li>Polka, Inc.</li>
+                <li>Policies</li>
+                <li>Investors</li>
+                <li>Careers</li>
+                <li>Press</li>
+              </ul>
+            </div>
+            <!--  -->
+            <div class="dropdown">
+              <div id="click4" class="btn-dropdown">
+                <span>Help</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul id="sec4">
+                <li>Help Center</li>
+                <li>Trust and safety</li>
+                <li>Privacy settings</li>
+              </ul>
+            </div>
+            <!--  -->
             <div class="social">
               <div class="facebook">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M16 8C16 3.6 12.4 0 8 0C3.6 0 0 3.6 0 8C0 12 2.9 15.3 6.7 15.9V10.3H4.7V8H6.7V6.2C6.7 4.2 7.9 3.1 9.7 3.1C10.6 3.1 11.5 3.3 11.5 3.3V5.3H10.5C9.5 5.3 9.2 5.9 9.2 6.5V8H11.4L11 10.3H9.1V16C13.1 15.4 16 12 16 8Z"
-                    fill="white" />
+                    fill="white"
+                  />
                 </svg>
               </div>
               <div class="twitter">
-                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  width="16"
+                  height="14"
+                  viewBox="0 0 16 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M16 2C15.4 2.3 14.8 2.4 14.1 2.5C14.8 2.1 15.3 1.5 15.5 0.7C14.9 1.1 14.2 1.3 13.4 1.5C12.8 0.9 11.9 0.5 11 0.5C8.9 0.5 7.3 2.5 7.8 4.5C5.1 4.4 2.7 3.1 1 1.1C0.1 2.6 0.6 4.5 2 5.5C1.5 5.5 1 5.3 0.5 5.1C0.5 6.6 1.6 8 3.1 8.4C2.6 8.5 2.1 8.6 1.6 8.5C2 9.8 3.2 10.8 4.7 10.8C3.5 11.7 1.7 12.2 0 12C1.5 12.9 3.2 13.5 5 13.5C11.1 13.5 14.5 8.4 14.3 3.7C15 3.3 15.6 2.7 16 2Z"
-                    fill="white" />
+                    fill="white"
+                  />
                 </svg>
               </div>
               <div class="linkin">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M3.60001 16H0.199997V5.3H3.60001V16ZM1.9 3.8C0.800002 3.8 0 3 0 1.9C0 0.8 0.900002 0 1.9 0C3 0 3.8 0.8 3.8 1.9C3.8 3 3 3.8 1.9 3.8ZM16 16H12.6V10.2C12.6 8.5 11.9 8 10.9 8C9.89999 8 8.89999 8.8 8.89999 10.3V16H5.5V5.3H8.7V6.8C9 6.1 10.2 5 11.9 5C13.8 5 15.8 6.1 15.8 9.4V16H16Z"
-                    fill="white" />
+                    fill="white"
+                  />
                 </svg>
               </div>
               <div class="dribble">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.4 16 16 12.416 16 8C16 3.584 12.4 0 8 0ZM13.28 3.68C14.24 4.848 14.8 6.32 14.832 7.936C14.608 7.888 12.352 7.44 10.08 7.712C10.032 7.6 9.984 7.472 9.936 7.36C9.792 7.024 9.648 6.688 9.488 6.368C11.984 5.36 13.136 3.872 13.28 3.68ZM8 1.184C9.728 1.184 11.328 1.84 12.528 2.896C12.4 3.072 11.376 4.448 8.944 5.36C7.824 3.296 6.576 1.616 6.4 1.36C6.912 1.248 7.44 1.184 8 1.184ZM5.088 1.824C5.264 2.064 6.48 3.76 7.616 5.776C4.416 6.624 1.6 6.608 1.296 6.608C1.76 4.48 3.184 2.72 5.088 1.824ZM1.168 8.016C1.168 7.952 1.168 7.872 1.168 7.808C1.456 7.824 4.784 7.856 8.192 6.832C8.384 7.216 8.576 7.6 8.752 8C8.672 8.032 8.576 8.048 8.48 8.08C4.96 9.216 3.088 12.32 2.928 12.576C1.824 11.36 1.168 9.76 1.168 8.016ZM8 14.832C6.416 14.832 4.96 14.288 3.808 13.392C3.936 13.136 5.312 10.464 9.168 9.12C9.184 9.104 9.2 9.104 9.216 9.104C10.176 11.6 10.576 13.68 10.672 14.288C9.856 14.64 8.944 14.832 8 14.832ZM11.808 13.664C11.744 13.248 11.376 11.248 10.48 8.8C12.624 8.464 14.496 9.024 14.736 9.088C14.432 10.992 13.344 12.64 11.808 13.664Z"
-                    fill="white" />
+                    fill="white"
+                  />
                 </svg>
               </div>
             </div>
-          </div>
-          <!-- column-2 -->
-          <div class="column column-2">
-            <p>Shop</p>
-            <ul>
-              <li>Gift cards</li>
-              <li>Site map</li>
-              <li>Polka blog</li>
-              <li>Login</li>
-              <li>Sign in</li>
-            </ul>
-          </div>
-          <!-- column-3 -->
-          <div class="column column-3">
-            <p>Sell</p>
-            <ul>
-              <li>Sell on Polka</li>
-              <li>Teams</li>
-              <li>Forums</li>
-              <li>Affiliates</li>
-            </ul>
-          </div>
-          <!-- column-4 -->
-          <div class="column column-4">
-            <p>About</p>
-            <ul>
-              <li>Polka, Inc.</li>
-              <li>Policies</li>
-              <li>Investors</li>
-              <li>Careers</li>
-              <li>Press</li>
-            </ul>
-          </div>
-          <!-- column-5 -->
-          <div class="column column-5">
-            <p>Help</p>
-            <ul>
-              <li>Help Center</li>
-              <li>Trust and safety</li>
-              <li>Privacy settings</li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-inc">
-          <div class="inc">
-            <p>© 2022 Commerce, Inc.</p>
-          </div>
-          <div class="cookis">
-            <span>Privacy policy</span>
-            <span>Terms of use</span>
-            <span>Cookies</span>
-          </div>
-          <div id="scroll" class="scroll-top">
-            <span>Scroll to top</span>
-            <i class="fa-solid fa-arrow-up"></i>
+            <div class="inc">© 2022 Commerce, Inc.</div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- end-sec-footer============= -->
-    <!-- start-sec-footer-small-mobile====== -->
-    <div class="sec-footer-small-mobile">
-      <div class="container">
-        <div class="sec-footer-small-mobile-main">
-          <div class="dropdown">
-            <div id="click" class="btn-dropdown">
-              <span>Shop</span>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <ul id="sec">
-              <li>Gift cards</li>
-              <li>Site map</li>
-              <li>Polka blog</li>
-              <li>Login</li>
-              <li>Sign in</li>
-            </ul>
-          </div>
-          <!--  -->
-          <div class="dropdown">
-            <div id="click2" class="btn-dropdown">
-              <span>Sell</span>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <ul id="sec2">
-              <li>Sell on Polka</li>
-              <li>Teams</li>
-              <li>Forums</li>
-              <li>Affiliates</li>
-            </ul>
-          </div>
-          <!--  -->
-          <div class="dropdown">
-            <div id="click3" class="btn-dropdown">
-              <span>About</span>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <ul id="sec3">
-              <li>Polka, Inc.</li>
-              <li>Policies</li>
-              <li>Investors</li>
-              <li>Careers</li>
-              <li>Press</li>
-            </ul>
-          </div>
-          <!--  -->
-          <div class="dropdown">
-            <div id="click4" class="btn-dropdown">
-              <span>Help</span>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <ul id="sec4">
-              <li>Help Center</li>
-              <li>Trust and safety</li>
-              <li>Privacy settings</li>
-            </ul>
-          </div>
-          <!--  -->
-          <div class="social">
-            <div class="facebook">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M16 8C16 3.6 12.4 0 8 0C3.6 0 0 3.6 0 8C0 12 2.9 15.3 6.7 15.9V10.3H4.7V8H6.7V6.2C6.7 4.2 7.9 3.1 9.7 3.1C10.6 3.1 11.5 3.3 11.5 3.3V5.3H10.5C9.5 5.3 9.2 5.9 9.2 6.5V8H11.4L11 10.3H9.1V16C13.1 15.4 16 12 16 8Z"
-                  fill="white" />
-              </svg>
-            </div>
-            <div class="twitter">
-              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M16 2C15.4 2.3 14.8 2.4 14.1 2.5C14.8 2.1 15.3 1.5 15.5 0.7C14.9 1.1 14.2 1.3 13.4 1.5C12.8 0.9 11.9 0.5 11 0.5C8.9 0.5 7.3 2.5 7.8 4.5C5.1 4.4 2.7 3.1 1 1.1C0.1 2.6 0.6 4.5 2 5.5C1.5 5.5 1 5.3 0.5 5.1C0.5 6.6 1.6 8 3.1 8.4C2.6 8.5 2.1 8.6 1.6 8.5C2 9.8 3.2 10.8 4.7 10.8C3.5 11.7 1.7 12.2 0 12C1.5 12.9 3.2 13.5 5 13.5C11.1 13.5 14.5 8.4 14.3 3.7C15 3.3 15.6 2.7 16 2Z"
-                  fill="white" />
-              </svg>
-            </div>
-            <div class="linkin">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M3.60001 16H0.199997V5.3H3.60001V16ZM1.9 3.8C0.800002 3.8 0 3 0 1.9C0 0.8 0.900002 0 1.9 0C3 0 3.8 0.8 3.8 1.9C3.8 3 3 3.8 1.9 3.8ZM16 16H12.6V10.2C12.6 8.5 11.9 8 10.9 8C9.89999 8 8.89999 8.8 8.89999 10.3V16H5.5V5.3H8.7V6.8C9 6.1 10.2 5 11.9 5C13.8 5 15.8 6.1 15.8 9.4V16H16Z"
-                  fill="white" />
-              </svg>
-            </div>
-            <div class="dribble">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.4 16 16 12.416 16 8C16 3.584 12.4 0 8 0ZM13.28 3.68C14.24 4.848 14.8 6.32 14.832 7.936C14.608 7.888 12.352 7.44 10.08 7.712C10.032 7.6 9.984 7.472 9.936 7.36C9.792 7.024 9.648 6.688 9.488 6.368C11.984 5.36 13.136 3.872 13.28 3.68ZM8 1.184C9.728 1.184 11.328 1.84 12.528 2.896C12.4 3.072 11.376 4.448 8.944 5.36C7.824 3.296 6.576 1.616 6.4 1.36C6.912 1.248 7.44 1.184 8 1.184ZM5.088 1.824C5.264 2.064 6.48 3.76 7.616 5.776C4.416 6.624 1.6 6.608 1.296 6.608C1.76 4.48 3.184 2.72 5.088 1.824ZM1.168 8.016C1.168 7.952 1.168 7.872 1.168 7.808C1.456 7.824 4.784 7.856 8.192 6.832C8.384 7.216 8.576 7.6 8.752 8C8.672 8.032 8.576 8.048 8.48 8.08C4.96 9.216 3.088 12.32 2.928 12.576C1.824 11.36 1.168 9.76 1.168 8.016ZM8 14.832C6.416 14.832 4.96 14.288 3.808 13.392C3.936 13.136 5.312 10.464 9.168 9.12C9.184 9.104 9.2 9.104 9.216 9.104C10.176 11.6 10.576 13.68 10.672 14.288C9.856 14.64 8.944 14.832 8 14.832ZM11.808 13.664C11.744 13.248 11.376 11.248 10.48 8.8C12.624 8.464 14.496 9.024 14.736 9.088C14.432 10.992 13.344 12.64 11.808 13.664Z"
-                  fill="white" />
-              </svg>
-            </div>
-          </div>
-          <div class="inc">© 2022 Commerce, Inc.</div>
-        </div>
-      </div>
-    </div>
-    <!-- end-sec-footer-small-mobile====== -->
-  </footer>
-  <script src="js/main.js"></script>
-</body>
+      <!-- end-sec-footer-small-mobile====== -->
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>
